@@ -1,9 +1,9 @@
 const ShopPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+	return (
+		<div>
+			<h1>Shop Page</h1>
+		</div>
+	);
+};
 
-export default ShopPage
+export default ShopPage;

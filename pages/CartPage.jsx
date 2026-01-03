@@ -1,9 +1,9 @@
 const CartPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+	return (
+		<div>
+			<h1>Cart Page</h1>
+		</div>
+	);
+};
 
-export default CartPage
+export default CartPage;
