@@ -1,3 +1,5 @@
+import { ShoppingCart } from "lucide-react"
+
 const Navbar = () => {
   return (
     <div>
