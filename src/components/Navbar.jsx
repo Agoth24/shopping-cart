@@ -6,7 +6,7 @@ const Navbar = () => {
 	const links = ["Home", "Shop", "Cart"];
 
 	return (
-		<header className="sticky">
+		<header className=" sticky top-0">
 			<nav className="flex p-4 sm:px-8 justify-between dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
 				{/* Logo container */}
 				<Link
