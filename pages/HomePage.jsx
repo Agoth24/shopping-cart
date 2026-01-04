@@ -7,7 +7,7 @@ const HomePage = () => {
                     <h1 className="text-6xl font-bold text-center dark:text-white">
                         Your Next Great Read Awaits
                     </h1>
-                    <h3 className="text-xl text-zinc-600">
+                    <h3 className="text-xl text-zinc-400">
                         Explore thousands of books across every genre
                     </h3>
                 </div>

@@ -6,7 +6,7 @@ const Navbar = () => {
 	const links = ["Home", "Shop", "Cart"];
 
 	return (
-		<header>
+		<header className="sticky">
 			<nav className="flex p-4 sm:px-8 justify-between dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
 				{/* Logo container */}
 				<Link
@@ -17,9 +17,9 @@ const Navbar = () => {
 					<h1 className="text-2xl font-medium">BLOOM Bookstore</h1>
 				</Link>
 				<ul className="hidden md:flex gap-8 items-center justify-center gap-">
-					{links.map((link) => {
+					{links.map((link, index) => {
 						return (
-							<Link
+							<Link key={index}
 								to={link !== "Home" ? link.toLowerCase() : "/"}
 								className="hover:text-violet-800 ease-in-out duration-150"
 							>
