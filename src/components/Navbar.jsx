@@ -48,7 +48,7 @@ const Navbar = () => {
 				<ul className="absolute md:hidden flex flex-col gap-4 px-4 py-6 bg-zinc-50 dark:bg-zinc-950 w-full border-b border-gray-200 dark:border-zinc-900 items-center">
 					{links.map((link) => {
 						return (
-							<Link
+							<Link 
 								to={link !== "Home" ? link.toLowerCase() : "/"}
 							>
 								{link}
