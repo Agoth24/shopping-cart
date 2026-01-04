@@ -1,8 +1,8 @@
 const HomePage = () => {
 	return (
-		<div>
-			<h1 className="text-3xl font-bold">Home Page</h1>
-		</div>
+		<main className="p-8">
+			<h1 className="text-3xl font-bold dark:text-white">Home Page</h1>
+		</main>
 	);
 };
 

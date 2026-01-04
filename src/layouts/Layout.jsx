@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const Layout = () => {
 	return (
-		<div>
+		<div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 dark:text-white flex flex-col">
 			<Navbar />
 			<Outlet />
 		</div>

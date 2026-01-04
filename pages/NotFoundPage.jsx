@@ -1,8 +1,8 @@
 const NotFoundPage = () => {
 	return (
-		<section className="flex items-center justify-center">
-			<h1 className="font-bold text-3xl">404, Page Not Found</h1>
-		</section>
+		<main className="p-8">
+			<h1 className="font-bold text-6xl dark:text-white">404 Page Not Found</h1>
+		</main>
 	);
 };
 

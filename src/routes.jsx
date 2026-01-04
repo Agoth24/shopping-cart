@@ -8,7 +8,11 @@ const routes = [
 	{
 		path: "/",
 		element: <Layout />,
-		errorElement: <NotFoundPage />,
+		errorElement: (
+			<Layout>
+				<NotFoundPage />,
+			</Layout>
+		),
 		children: [
 			{ index: true, element: <HomePage /> },
 			{ path: "shop", element: <ShopPage /> },
