@@ -9,8 +9,8 @@ const ShopPage = () => {
 	if (error) return <p>A network error has occurred</p>;
 
 	return (
-		<section className="p-4">
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 items-start gap-6 rounded-xl">
+		<section className="p-4 md:p-8">
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 rounded-xl">
 				{products.map((product) => (
 					<BookCard key={product.id} product={product} />
 				))}
