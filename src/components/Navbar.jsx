@@ -7,22 +7,21 @@ const Navbar = () => {
 
 	return (
 		<header>
-			<nav className="flex p-4 sm:px-8 justify-between border-b border-gray-200 dark:border-zinc-900 md:grid md:grid-cols-3">
+			<nav className="flex p-4 sm:px-8 justify-between dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
 				{/* Logo container */}
-				<Link to="/">
-					<div className="flex items-center gap-2 hover:text-sky-700 ease-in-out duration-150">
-						<BookOpenText size={25} />
-						<h1 className="text-2xl font-medium">
-							BLOOM Bookstore
-						</h1>
-					</div>
+				<Link
+					className="flex items-center gap-2 hover:text-violet-800 ease-in-out duration-150 w-max"
+					to="/"
+				>
+					<BookOpenText size={25} />
+					<h1 className="text-2xl font-medium">BLOOM Bookstore</h1>
 				</Link>
 				<ul className="hidden md:flex gap-8 items-center justify-center gap-">
 					{links.map((link) => {
 						return (
 							<Link
 								to={link !== "Home" ? link.toLowerCase() : "/"}
-								className="hover:text-sky-700 ease-in-out duration-150"
+								className="hover:text-violet-800 ease-in-out duration-150"
 							>
 								{link}
 							</Link>
@@ -30,7 +29,7 @@ const Navbar = () => {
 					})}
 				</ul>
 				{/* Mobile Button container */}
-				<div className="flex justify-end items-center gap-4 *:hover:text-sky-700 ease-in-out duration-150">
+				<div className="flex justify-end items-center gap-4 *:hover:text-violet-800 ease-in-out duration-150">
 					{/* Cart Button */}
 					<Link to="/cart">
 						<ShoppingCart className="" size={25} />
