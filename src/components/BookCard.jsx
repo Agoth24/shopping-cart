@@ -1,26 +1,27 @@
 import { Link } from "react-router-dom";
 
 const BookCard = ({ product }) => {
+	const author = Array.isArray(product.author_name) ? product.author_name[0] : product.author_name;
 	return (
 		// Card component with image, title, author and rating
 		<Link
 			to="/"
 			className="p-4 hover:bg-zinc-200 dark:hover:bg-zinc-900 rounded-xl ease-in-out duration-100"
 		>
-			<div key={product.id} className="flex flex-col justify-between">
+			<div key={product.key} className="flex flex-col justify-between">
 				<div className="aspect-2/3 w-full mb-2 overflow-hidden">
 					<img
 						className="h-full w-full object-cover rounded-md"
-						src={product.volumeInfo.imageLinks?.thumbnail}
+						src={`https://covers.openlibrary.org/b/id/${product.cover_i}-L.jpg`}
 						alt=""
 					/>
 				</div>
 				<div className="flex flex-col gap-2 justify-self-end">
 					<h3 className="text-sm text-gray-500">
-						{product.volumeInfo.authors?.[0]}
+						{author}
 					</h3>
 					<h1 className="text-xl font-bold">
-						{product.volumeInfo.title}
+						{product.title}
 					</h1>
 				</div>
 			</div>

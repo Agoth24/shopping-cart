@@ -1,18 +1,17 @@
-import useBookData from "../hooks/useBookData";
+// import useBookData from "../hooks/useBookData";
 import BookCard from "../src/components/BookCard";
-import Loading from "../src/components/Loading";
-
+// import Loading from "../src/components/Loading";
+import books from "../assets/books"
 const ShopPage = () => {
-	const { products, error, loading } = useBookData();
+	// const { products, error, loading } = useBookData();
 
-	if (loading) return <Loading />;
-	if (error) return <p>A network error has occurred</p>;
-
+	// if (loading) return <Loading />;
+	// if (error) return <p>A network error has occurred</p>;
 	return (
 		<section className="p-4 md:p-8">
 			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 rounded-xl">
-				{products.map((product) => (
-					<BookCard key={product.id} product={product} />
+				{books.map((book) => (
+					<BookCard key={book.key} product={book} />
 				))}
 			</div>
 		</section>
