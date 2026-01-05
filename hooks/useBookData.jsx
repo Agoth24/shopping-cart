@@ -7,7 +7,7 @@ const useBookData = () => {
 
 	const cacheKey = "books:economics:v1";
 	const url =
-		"https://www.googleapis.com/books/v1/volumes?q=subject:economics&maxResults=40";
+		"http://www.googleapis.com/books/v1/volumes?q=subject:economics&maxResults=40";
 
 	useEffect(() => {
 		const cached = localStorage.getItem(cacheKey);

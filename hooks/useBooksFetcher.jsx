@@ -9,7 +9,7 @@ const useBooksFetcher = () => {
 			for (const title of titles) {
 				try {
 					const res = await fetch(
-						`https://openlibrary.org/search.json?q=${encodeURIComponent(
+						`http://openlibrary.org/search.json?q=${encodeURIComponent(
 							title
 						)}&limit=1`
 					);
