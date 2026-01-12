@@ -7,7 +7,7 @@ const Navbar = () => {
 
 	return (
 		<header className=" sticky top-0">
-			<nav className="flex p-4 sm:px-8 justify-between dark:bg-zinc-950 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
+			<nav className="flex p-4 sm:px-8 justify-between bg-zinc-50/75 backdrop-blur-md dark:bg-zinc-950/75 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
 				{/* Logo container */}
 				<Link
 					className="flex items-center gap-2 hover:text-violet-800 ease-in-out duration-150 w-max"
