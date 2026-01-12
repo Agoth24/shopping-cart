@@ -1,5 +1,5 @@
 # React Bookstore Application
-(See it Live)[https://bloom-bookstore.vercel.app/]
+[See it Live](https://bloom-bookstore.vercel.app/)
 This is a simple React application that allows users to create a reading list of books from a bookstore. Users can add new books, view the list of existing books, and remove books from their list.
 ## Features
 - Add new books to their list
