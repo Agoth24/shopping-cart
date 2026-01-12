@@ -8,7 +8,7 @@ const HomePage = () => {
                         Your Next Great Read Awaits
                     </h1>
                     <h3 className="text-xl text-zinc-400">
-                        Explore thousands of books across every genre
+                        Explore our diverse collection of 100 books.
                     </h3>
                 </div>
 				<Link
