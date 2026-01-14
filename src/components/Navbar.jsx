@@ -1,4 +1,4 @@
-import { ShoppingCart, BookOpenText, Menu, X } from "lucide-react";
+import { ListPlus, BookOpenText, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
 				<div className="flex justify-end items-center gap-4 *:hover:text-violet-800 ease-in-out duration-150">
 					{/* Cart Button */}
 					<Link to="/cart">
-						<ShoppingCart className="" size={25} />
+						<ListPlus className="" size={25} />
 					</Link>
 					{/* Hamburger Menu button */}
 					<button
