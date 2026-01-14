@@ -12,8 +12,10 @@ const useBookData = () => {
 	useEffect(() => {
 		const cached = localStorage.getItem(cacheKey);
 		if (cached) {
-			setProducts(JSON.parse(cached));
-			setIsLoading(false);
+			() => {
+				setProducts(JSON.parse(cached));
+				setIsLoading(false);
+			};
 			return;
 		}
 		fetch(url)
@@ -24,9 +26,9 @@ const useBookData = () => {
 				return response.json();
 			})
 			.then((prods) => {
-                const items = prods.items || []
+				const items = prods.items || [];
 				setProducts(items);
-                localStorage.setItem(cacheKey, JSON.stringify(items))
+				localStorage.setItem(cacheKey, JSON.stringify(items));
 			})
 			.catch((error) => setError(error))
 			.finally(() => setIsLoading(false));
