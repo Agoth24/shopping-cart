@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-// import useBookData from "../hooks/useBookData";
 import BookCard from "../src/components/BookCard";
 import Loading from "../src/components/Loading";
 import books from "../assets/books";
 const ShopPage = () => {
-	// const { products, error, loading } = useBookData();
 	const [imagesReady, setImagesReady] = useState(false);
 
 	useEffect(() => {
@@ -36,8 +34,6 @@ const ShopPage = () => {
 		};
 	}, []);
 
-	// if (loading) return <Loading />;
-	// if (error) return <p>A network error has occurred</p>;
 	return (
 		<section className="p-4 md:p-8">
 			<div
