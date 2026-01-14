@@ -1,9 +1,11 @@
-import { BarLoader } from "react-spinners"
+import { PuffLoader } from "react-spinners";
 
 const Loading = () => {
-  return (
-    <BarLoader />
-  )
-}
+	return (
+		<div className="min-h-full min-w-full flex justify-center items-center">
+			<PuffLoader color="purple" size={120}/>
+		</div>
+	);
+};
 
-export default Loading
+export default Loading;
