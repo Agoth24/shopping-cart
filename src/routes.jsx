@@ -1,8 +1,8 @@
-import HomePage from "../pages/HomePage";
-import ShopPage from "../pages/ShopPage";
-import CartPage from "../pages/CartPage";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
+import CartPage from "./pages/CartPage";
 import Layout from "./layouts/Layout";
-import NotFoundPage from "../pages/NotFoundPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const routes = [
 	{
