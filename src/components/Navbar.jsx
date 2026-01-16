@@ -1,4 +1,4 @@
-import { ListPlus, BookOpenText, Menu, X } from "lucide-react";
+import { ListPlus, BookOpenText, EllipsisVertical, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
 						className="md:hidden"
 						onClick={() => setIsOpen(!isOpen)}
 					>
-						{!isOpen ? <Menu size={25} /> : <X size={25} />}
+						{!isOpen ? <EllipsisVertical size={25} /> : <X size={25} />}
 					</button>
 				</div>
 			</nav>
