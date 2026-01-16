@@ -7,7 +7,13 @@ const Navbar = () => {
 
 	return (
 		<header className=" sticky top-0">
-			<nav className="flex p-4 sm:px-8 justify-between bg-zinc-50/75 backdrop-blur-md dark:bg-zinc-950/75 border-b border-gray-200 dark:border-zinc-800 md:grid md:grid-cols-3">
+			<nav
+				className={`flex p-4 sm:px-8 justify-between bg-zinc-50/75 backdrop-blur-md dark:bg-zinc-950/75 ${
+					isOpen
+						? "border-0"
+						: "border-b border-gray-200 dark:border-zinc-800"
+				} md:grid md:grid-cols-3`}
+			>
 				{/* Logo container */}
 				<Link
 					className="flex items-center gap-2 hover:text-violet-800 ease-in-out duration-150 w-max"
@@ -19,7 +25,8 @@ const Navbar = () => {
 				<ul className="hidden md:flex gap-8 items-center justify-center gap-">
 					{links.map((link, index) => {
 						return (
-							<Link key={index}
+							<Link
+								key={index}
 								to={link !== "Home" ? link.toLowerCase() : "/"}
 								className="hover:text-violet-800 ease-in-out duration-150"
 							>
@@ -34,22 +41,28 @@ const Navbar = () => {
 					<Link to="/cart">
 						<ListPlus className="" size={25} />
 					</Link>
-					{/* Hamburger Menu button */}
+					{/* Menu button */}
 					<button
 						className="md:hidden"
 						onClick={() => setIsOpen(!isOpen)}
 					>
-						{!isOpen ? <EllipsisVertical size={25} /> : <X size={25} />}
+						{!isOpen ? (
+							<EllipsisVertical size={25} />
+						) : (
+							<X size={25} />
+						)}
 					</button>
 				</div>
 			</nav>
 			{/* Mobile Nav links */}
 			{isOpen && (
-				<ul className="absolute md:hidden flex flex-col gap-4 px-4 py-6 bg-zinc-50 dark:bg-zinc-950 w-full border-b border-gray-200 dark:border-zinc-900 items-center">
+				<ul className="absolute md:hidden flex flex-col gap-4 px-4 py-6 bg-zinc-50/75 backdrop-blur-md dark:bg-zinc-950/75 w-full border-b border-gray-200 dark:border-zinc-900 items-center">
 					{links.map((link) => {
 						return (
-							<Link 
+							<Link
+								className="text-lg font-bold"
 								to={link !== "Home" ? link.toLowerCase() : "/"}
+								onClick={() => setIsOpen(false)}
 							>
 								{link}
 							</Link>
