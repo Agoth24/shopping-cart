@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import DefaultCover from "./DefaultCover";
 
-const BookCard = ({ product }) => {
+const BookCard = ({ product, coverUrl }) => {
 	const author = Array.isArray(product.author_name)
 		? product.author_name[0]
 		: product.author_name;
@@ -13,10 +13,10 @@ const BookCard = ({ product }) => {
 		>
 			<div key={product.key} className="flex flex-col justify-between">
 				<div className="aspect-2/3 w-full mb-2 overflow-hidden">
-					{product.cover_i ? (
+					{coverUrl ? (
 						<img
 							className="flex items-center justify-center h-full w-full object-cover rounded-md"
-							src={`https://covers.openlibrary.org/b/id/${product.cover_i}-L.jpg`}
+							src={coverUrl}
 							alt="product.title"
 						/>
 					) : (
