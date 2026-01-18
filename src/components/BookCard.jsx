@@ -1,10 +1,6 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
 import DefaultCover from "./DefaultCover";
 import { CirclePlus, Check } from "lucide-react";
-const BookCard = ({ product, coverUrl }) => {
-	const [added, setAdded] = useState(false);
-
+const BookCard = ({ product, coverUrl, isAdded, onToggle }) => {
 	const author = Array.isArray(product.author_name)
 		? product.author_name[0]
 		: product.author_name;
@@ -28,10 +24,10 @@ const BookCard = ({ product, coverUrl }) => {
 					<div className="flex gap-4 justify-between items-center">
 						<h1 className="text-xl font-bold">{product.title}</h1>
 						<button
-							onClick={() => setAdded(!added)}
+							onClick={() => onToggle?.(product)}
 							className="cursor-pointer hover:text-green-500"
 						>
-							{!added ? (
+							{!isAdded ? (
 								<CirclePlus className="shrink-0" size={25} />
 							) : (
 								<Check className="shrink-0" size={25} />
